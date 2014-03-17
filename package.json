@@ -1,0 +1,11 @@
+{
+  "name": "Ruby Blue",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "Oh so blue",
+  "repository": "https://github.com/siannopollo/ruby-blue-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
