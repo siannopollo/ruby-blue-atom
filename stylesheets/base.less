@@ -94,6 +94,14 @@
 
   &.operator {
     color: @syntax-text-color;
+    
+    &.logical {
+      color: @blue;
+    }
+    
+    &.assignment, &.comparison {
+      color: @blue;
+    }
   }
 
   &.other.special-method {
@@ -164,15 +172,19 @@
 
 .string {
   color: @dark-green;
-
+  
   &.regexp {
     color: @red;
-
+    
     .source.ruby.embedded {
       color: @red;
     }
   }
-
+  
+  .embedded .source.ruby {
+    color: white;
+  }
+  
   &.other.link {
     color: @red;
   }
@@ -206,9 +218,22 @@
   }
 
   &.section.embedded {
-    color: darken(@red, 10%);
+    color: white;
   }
-
+  
+  &.key-value {
+    color: @blue;
+  }
+  
+  &.separator {
+    &.other {
+      color: @blue;
+    }
+    
+    &.variable {
+      color: white;
+    }
+  }
 }
 
 .support {
