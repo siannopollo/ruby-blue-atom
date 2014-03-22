@@ -1,7 +1,7 @@
 {
   "name": "ruby-blue-syntax",
   "theme": "syntax",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Oh so blue: The Ruby Blue TextMate theme, ported to the Atom editor.",
   "repository": "https://github.com/siannopollo/ruby-blue-atom",
   "license": "MIT",
