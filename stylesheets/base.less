@@ -370,3 +370,85 @@
 .editor.mini .scroll-view {
   padding-left: 1px;
 }
+
+.source.coffee {
+  .meta {
+    .storage.type.class {
+      color: @dark-orange;
+    }
+    
+    .name.class {
+      color: @cream;
+    }
+  }
+  
+  .storage.type.function {
+    color: @blue;
+  }
+}
+
+.source.diff {
+  float: left;
+  width: 100%;
+  
+  .markup {
+    display: block;
+    
+    &.deleted {
+      color: white;
+      background-color: fade(@diff-red, 50%);
+    }
+    
+    &.inserted {
+      color: white;
+      background-color: fade(@dark-green, 50%);
+    }
+  }
+  
+  .header {
+    display: block;
+    background-color: fade(@diff-blue, 50%);
+    
+    &.from-file .punctuation {
+      color: darken(@red, 20%);
+    }
+    
+    &.to-file .punctuation {
+      color: @dark-green;
+    }
+  }
+  
+  .index {
+    display: block;
+    background-color: fade(@diff-header, 50%);
+  }
+  
+  .range.unified {
+    background-color: fade(@diff-header, 50%);
+    
+    .punctuation {
+      font-weight: bold;
+      color: silver;
+    }
+  }
+}
+
+.editor .lines .git-commit {
+  .markup {
+    &.changed {
+      color: @orange;
+    }
+    
+    &.inserted {
+      color: @dark-green;
+    }
+    
+    &.deleted {
+      color: @dark-red;
+    }
+  }
+  
+  &.embedded .markup {
+    color: white;
+  }
+}

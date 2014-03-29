@@ -14,8 +14,14 @@
 @green: #b5bd68;
 @dark-green: #1DC116;
 @red: saturate(#cc6666, 20%);
+@dark-red: saturate(@red, 10%);
 @orange: #de935f;
 @dark-orange: #f8bb00;
 @light-orange: #f0c674;
 @cream: #f7deb1;
 @yellow: #eddd3d;
+
+@diff-red: @dark-red;
+@diff-green: desaturate(@dark-green, 40%);
+@diff-blue: lighten(@background, 20%);
+@diff-header: lighten(saturate(@diff-blue, 50%), 20%);
