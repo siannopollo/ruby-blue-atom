@@ -8,5 +8,4 @@ The Ruby Blue TextMate theme, ported to the Atom editor.
 ### TODO
 
 - Better highlighting for:
-  - yaml
   - coffeescript and javascript
