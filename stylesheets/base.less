@@ -82,7 +82,7 @@
   &.name.type {
     color: @purple;
   }
-
+  
   &.other.inherited-class {
     color: darken(@purple, 10%);
     font-style: italic;
@@ -91,11 +91,11 @@
 
 .keyword {
   color: @dark-orange;
-
+  
   &.control {
     color: @dark-orange;
   }
-
+  
   &.operator {
     color: @syntax-text-color;
     
@@ -107,11 +107,11 @@
       color: @blue;
     }
   }
-
+  
   &.other.special-method {
     color: @dark-orange;
   }
-
+  
   &.other.unit {
     color: @orange;
   }
@@ -123,27 +123,27 @@
 
 .constant {
   color: @purple;
-
+  
   &.character.escape {
     color: @yellow;
   }
-
+  
   &.numeric {
     color: @yellow;
   }
-
+  
   &.other.color {
     color: @cyan;
   }
-
+  
   &.other.symbol {
     color: @red;
-
+    
     .punctuation {
       color: @red;
     }
   }
-
+  
   &.nil, &.boolean {
     color: @blue;
   }
@@ -151,16 +151,16 @@
 
 .variable {
   color: @cream;
-
+  
   &.interpolation {
     color: darken(@red, 10%);
   }
-
+  
   &.parameter.function {
     color: @blue;
     font-style: italic;
   }
-
+  
   &.instance {
     color: @cream;
     .punctuation {
@@ -369,22 +369,6 @@
   padding-left: 1px;
 }
 
-.source.coffee {
-  .meta {
-    .storage.type.class {
-      color: @dark-orange;
-    }
-    
-    .name.class {
-      color: @cream;
-    }
-  }
-  
-  .storage.type.function {
-    color: @blue;
-  }
-}
-
 /******* Diff *******/
 .source.diff {
   float: left;
@@ -532,3 +516,37 @@
   }
 }
 /******* YAML *******/
+
+/******* Coffeescript & JS *******/
+.source.coffee, .source.js {
+  .meta {
+    .storage.type.class {
+      color: @dark-orange;
+    }
+    
+    .name.class {
+      color: @purple;
+    }
+  }
+  
+  .support.function {
+    color: saturate(@cyan, 20%);
+  }
+  
+  .entity.name.instance.type {
+    color: @purple;
+  }
+  
+  .storage.type.function {
+    color: @blue;
+  }
+  
+  .instance.constructor .keyword.new {
+    color: @dark-orange;
+  }
+  
+  .keyword.operator.coffee {
+    color: @blue;
+  }
+}
+/******* Coffeescript & JS *******/
