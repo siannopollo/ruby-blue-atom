@@ -203,28 +203,26 @@
     &.string {
       color: @dark-green;
     }
-
-    &.parameters,
-    &.array {
+    
+    &.parameters, &.array {
       color: @syntax-text-color;
     }
-
-    &.heading,
-    &.identity {
+    
+    &.heading, &.identity {
       color: @blue;
     }
-
+    
     &.bold {
       color: @light-orange;
       font-style: bold;
     }
-
+    
     &.italic {
       color: @purple;
       font-style: italic;
     }
   }
-
+  
   &.section.embedded {
     color: white;
   }
@@ -248,10 +246,10 @@
   &.class {
     color: @cream;
   }
-
+  
   &.function  {
     color: @cyan;
-
+    
     &.any-method {
       color: @blue;
     }
@@ -262,23 +260,23 @@
   &.name.function {
     color: @light-orange;
   }
-
+  
   &.name.class, &.name.type.class {
     color: @purple;
   }
-
+  
   &.name.section {
     color: @blue;
   }
-
+  
   &.name.tag {
     color: @red;
     text-decoration: underline;
   }
-
+  
   &.other.attribute-name {
     color: @purple;
-
+    
     &.id {
       color: @blue;
     }
@@ -289,19 +287,19 @@
   &.class {
     color: @light-orange;
   }
-
+  
   &.link {
     color: @orange;
   }
-
+  
   &.require {
     color: white;
   }
-
+  
   &.selector {
     color: @purple;
   }
-
+  
   &.separator {
     background-color: @gray;
     color: @syntax-text-color;
@@ -325,36 +323,36 @@
     color: @orange;
     font-style: bold;
   }
-
+  
   &.changed {
     color: @purple;
   }
-
+  
   &.deleted {
     color: @red;
   }
-
+  
   &.italic {
     color: @purple;
     font-style: italic;
   }
-
+  
   &.heading .punctuation.definition.heading {
     color: @blue;
   }
-
+  
   &.inserted {
     color: @green;
   }
-
+  
   &.list {
     color: @red;
   }
-
+  
   &.quote {
     color: @orange;
   }
-
+  
   &.raw.inline {
     color: @green;
   }
@@ -387,6 +385,7 @@
   }
 }
 
+/******* Diff *******/
 .source.diff {
   float: left;
   width: 100%;
@@ -432,7 +431,9 @@
     }
   }
 }
+/******* Diff *******/
 
+/******* Git commit *******/
 .editor .lines .git-commit {
   .markup {
     &.changed {
@@ -452,3 +453,69 @@
     color: white;
   }
 }
+/******* Git commit *******/
+
+/******* HTML-ish *******/
+.editor {
+  &.text-html-basic, &.text-html-erb, &.text-haml, &.text-xml {
+    background-color: darken(@background, 13%);
+  }
+}
+
+.editor .lines {
+  .text.html, .text.haml, .text.xml {
+    color: @blue;
+    
+    .tag, .embedded {
+      .definition.tag {
+        color: @blue;
+      }
+    }
+    
+    .embedded {
+      color: white;
+    }
+    
+    .entity.name.tag, .entity.attribute-name {
+      color: @pink;
+      text-decoration: none;
+    }
+  }
+  
+  .text.html.erb {
+    .embedded.line.erb {
+      & > .source.ruby {
+        background-color: fade(lighten(@background, 10%), 50%);
+      }
+      
+      .punctuation.erb {
+        color: @blue;
+      }
+    }
+  }
+  
+  .text.haml {
+    .source.embedded {
+      color: @blue;
+      
+      .entity.name.tag {
+        color: @dark-orange;
+      }
+    }
+    
+    .line.ruby {
+      .source.ruby {
+        color: white;
+        
+        &.embedded {
+          background-color: fade(lighten(@background, 10%), 50%);
+        }
+        
+        .viewhelpers.rails, .actionpack.rails {
+          color: @red;
+        }
+      }
+    }
+  }
+}
+/******* HTML-ish *******/
