@@ -196,6 +196,21 @@
   &.other.link {
     color: @red;
   }
+  
+  /* backtick */
+  &.interpolated.ruby {
+    color: @light-gray;
+    
+    & > .punctuation {
+      color: @light-gray;
+    }
+    
+    .embedded.ruby {
+      & > .punctuation {
+        color: white;
+      }
+    }
+  }
 }
 
 .punctuation {
