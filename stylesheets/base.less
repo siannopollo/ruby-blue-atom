@@ -373,13 +373,6 @@
   }
 }
 
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-  &.heading {
-    color: @green;
-  }
-}
-
 .editor.mini .scroll-view {
   padding-left: 1px;
 }
@@ -457,7 +450,7 @@
 /******* HTML-ish *******/
 .editor {
   &.text-html-basic, &.text-html-erb, &.text-haml, &.text-xml {
-    background-color: darken(@background, 13%);
+    background-color: @dark-background;
   }
 }
 
@@ -565,3 +558,72 @@
   }
 }
 /******* Coffeescript & JS *******/
+
+/******* Markdown *******/
+.editor.source-gfm {
+  background-color: @dark-background;
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  
+  &.heading {
+    color: @dark-orange;
+    
+    &.heading-1, &.heading-2 {
+      text-decoration: underline;
+      text-decoration: blink;
+    }
+  }
+  
+  &.raw {
+    font-family: monospace;
+    background: fade(white, 40%);
+    border: solid 1px transparent;
+    color: white;
+    
+    .support {
+      -webkit-text-stroke: 2px white;
+    }
+  }
+  
+  &.bold {
+    color: @orange;
+    -webkit-text-stroke: 1px @orange;
+  }
+}
+
+.source.gfm {
+  .comment.hr {
+    &:after {
+      content: '                                                                             ';
+    }
+    
+    &, &:after {
+      border-bottom: 1px solid @gray;
+    }
+  }
+  
+  .quote {
+    &.comment {
+      color: @cyan;
+    }
+    &.support {
+      color: @green;
+    }
+  }
+  
+  .link {
+    color: @cream;
+    
+    .entity {
+      color: darken(saturate(@blue, 40%), 10%);
+    }
+    
+    .underline {
+      text-decoration: underline;
+      color: @blue;
+    }
+  }
+}
+/******* Markdown *******/
