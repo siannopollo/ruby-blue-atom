@@ -7,4 +7,4 @@ The Ruby Blue TextMate theme, ported to the Atom editor.
 
 ### Bonus
 
-Install the `editor-grammar-scope` package for better colors when editing html-ish files (.html, .html.haml, .html.erb, .xml).
+Install the [editor-grammar-scope](https://atom.io/packages/editor-grammar-scope) package for better colors when editing html-ish files (.html, .html.haml, .html.erb, .xml).
