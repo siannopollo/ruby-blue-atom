@@ -535,10 +535,16 @@
     .name.class {
       color: @purple;
     }
+    
+    &.function {
+      .storage.type.function {
+        color: @bright-cyan;
+      }
+    }
   }
   
   .support.function {
-    color: saturate(@cyan, 20%);
+    color: @bright-cyan;
   }
   
   .entity.name.instance.type {
@@ -553,7 +559,7 @@
     color: @dark-orange;
   }
   
-  .keyword.operator.coffee {
+  .keyword.operator {
     color: @blue;
   }
   
