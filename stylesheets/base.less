@@ -103,7 +103,7 @@
       color: @blue;
     }
     
-    &.assignment, &.comparison {
+    &.assignment, &.comparison, &.arithmetic {
       color: @blue;
     }
   }
@@ -639,3 +639,19 @@
   }
 }
 /******* Markdown *******/
+
+/******* Cucumber *******/
+.editor.text-gherkin-feature {
+  background-color: @dark-background;
+}
+
+.text.gherkin {
+  color: white;
+  
+  .cucumber.table {
+    .source {
+      color: @blue;
+    }
+  }
+}
+/******* Cucumber *******/
