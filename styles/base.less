@@ -447,7 +447,10 @@ atom-text-editor .lines .git-commit, atom-text-editor::shadow .lines .git-commit
 
 /******* HTML-ish *******/
 atom-text-editor, atom-text-editor::shadow {
-  &.text-html-basic, &.text-html-erb, &.text-haml, &.text-xml {
+  &[data-grammar="text html basic"],
+  &[data-grammar="text html erb"],
+  &[data-grammar="text haml"],
+  &[data-grammar="text xml"] {
     background-color: @dark-background;
   }
 }
@@ -570,7 +573,8 @@ atom-text-editor .lines .source.yaml, atom-text-editor::shadow .lines .source.ya
 /******* Coffeescript & JS *******/
 
 /******* Markdown *******/
-atom-text-editor.source-gfm, atom-text-editor::shadow.source-gfm {
+atom-text-editor[data-grammar="source gfm"],
+atom-text-editor::shadow[data-grammar="source gfm"] {
   background-color: @dark-background;
 }
 
@@ -639,7 +643,8 @@ atom-text-editor.source-gfm, atom-text-editor::shadow.source-gfm {
 /******* Markdown *******/
 
 /******* Cucumber *******/
-atom-text-editor.text-gherkin-feature, atom-text-editor::shadow.text-gherkin-feature {
+atom-text-editor[data-grammar="text gherkin feature"],
+atom-text-editor::shadow[data-grammar="text gherkin feature"] {
   background-color: @dark-background;
 }
 
