@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor {
+:host, atom-text-editor, atom-text-editor::shadow {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
   
@@ -55,12 +55,14 @@ atom-text-editor {
   }
 }
 
-atom-text-editor .search-results .marker .region {
+atom-text-editor .search-results .marker .region,
+atom-text-editor::shadow .search-results .marker .region {
   background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .marker.current-result .region {
+atom-text-editor .search-results .marker.current-result .region,
+atom-text-editor::shadow .search-results .marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
@@ -368,7 +370,8 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 }
 
-atom-text-editor[mini] .scroll-view {
+atom-text-editor[mini] .scroll-view,
+atom-text-editor::shadow[mini] .scroll-view {
   padding-left: 1px;
 }
 
@@ -421,7 +424,7 @@ atom-text-editor[mini] .scroll-view {
 /******* Diff *******/
 
 /******* Git commit *******/
-atom-text-editor .lines .git-commit {
+atom-text-editor .lines .git-commit, atom-text-editor::shadow .lines .git-commit {
   .markup {
     &.changed {
       color: @orange;
@@ -443,13 +446,13 @@ atom-text-editor .lines .git-commit {
 /******* Git commit *******/
 
 /******* HTML-ish *******/
-atom-text-editor {
+atom-text-editor, atom-text-editor::shadow {
   &.text-html-basic, &.text-html-erb, &.text-haml, &.text-xml {
     background-color: @dark-background;
   }
 }
 
-atom-text-editor .lines {
+atom-text-editor .lines, atom-text-editor::shadow .lines {
   .text.html, .text.haml, .text.xml {
     color: @blue;
     
@@ -508,7 +511,7 @@ atom-text-editor .lines {
 /******* HTML-ish *******/
 
 /******* YAML *******/
-atom-text-editor .lines .source.yaml {
+atom-text-editor .lines .source.yaml, atom-text-editor::shadow .lines .source.yaml {
   .tag.name.yaml {
     color: @pink;
     text-decoration: none;
@@ -567,7 +570,7 @@ atom-text-editor .lines .source.yaml {
 /******* Coffeescript & JS *******/
 
 /******* Markdown *******/
-atom-text-editor.source-gfm {
+atom-text-editor.source-gfm, atom-text-editor::shadow.source-gfm {
   background-color: @dark-background;
 }
 
@@ -636,7 +639,7 @@ atom-text-editor.source-gfm {
 /******* Markdown *******/
 
 /******* Cucumber *******/
-atom-text-editor.text-gherkin-feature {
+atom-text-editor.text-gherkin-feature, atom-text-editor::shadow.text-gherkin-feature {
   background-color: @dark-background;
 }
 
