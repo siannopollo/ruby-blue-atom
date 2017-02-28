@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-:host, atom-text-editor, atom-text-editor::shadow {
+atom-text-editor, atom-text-editor.editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
   
@@ -86,336 +86,336 @@ atom-text-editor::shadow .search-results .marker.current-result .region {
   }
 }
 
-.keyword {
+.syntax--keyword {
   color: @dark-orange;
   
-  &.control {
+  &.syntax--control {
     color: @dark-orange;
   }
   
-  &.operator {
+  &.syntax--operator {
     color: @syntax-text-color;
     
-    &.logical {
+    &.syntax--logical {
       color: @blue;
     }
     
-    &.assignment, &.comparison, &.arithmetic {
+    &.syntax--assignment, &.syntax--comparison, &.syntax--arithmetic {
       color: @blue;
     }
   }
   
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
     color: @dark-orange;
   }
   
-  &.other.unit {
+  &.syntax--other.syntax--unit {
     color: @orange;
   }
 }
 
-.storage {
+.syntax--storage {
   color: @purple;
 }
 
-.constant {
+.syntax--constant {
   color: @purple;
   
-  &.character.escape {
+  &.syntax--character.syntax--escape {
     color: @yellow;
   }
   
-  &.numeric {
+  &.syntax--numeric {
     color: @yellow;
   }
   
-  &.other.color {
+  &.syntax--other.syntax--color {
     color: @cyan;
   }
   
-  &.other.symbol {
+  &.syntax--other.syntax--symbol {
     color: @red;
     
-    .punctuation {
+    .syntax--punctuation {
       color: @red;
     }
   }
   
-  &.nil, &.boolean {
+  &.syntax--nil, &.syntax--boolean {
     color: @blue;
   }
 }
 
-.variable {
+.syntax--variable {
   color: @cream;
   
-  &.interpolation {
+  &.syntax--interpolation {
     color: darken(@red, 10%);
   }
   
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: @blue;
     font-style: italic;
   }
   
-  &.instance {
+  &.syntax--instance {
     color: @cream;
-    .punctuation {
+    .syntax--punctuation {
       color: @cream;
     }
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
-.string {
+.syntax--string {
   color: @dark-green;
   
-  &.regexp {
+  &.syntax--regexp {
     color: @red;
     
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @red;
     }
     
-    .punctuation.definition.string {
+    .syntax--punctuation.syntax--definition.syntax--string {
       color: @red;
     }
   }
   
-  .embedded .source.ruby {
+  .syntax--embedded .syntax--source.syntax--ruby {
     color: white;
   }
   
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @red;
   }
   
   /* backtick */
-  &.interpolated.ruby:not(.quoted):not(.regexp) {
+  &.syntax--interpolated.ruby:not(.syntax--quoted):not(.syntax--regexp) {
     color: @light-gray;
     
-    & > .punctuation {
+    & > .syntax--punctuation {
       color: @light-gray;
     }
     
-    .embedded.ruby {
-      & > .punctuation {
+    .syntax--embedded.syntax--ruby {
+      & > .syntax--punctuation {
         color: white;
       }
     }
   }
 }
 
-.punctuation {
-  &.definition {
-    &.string {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--string {
       color: @dark-green;
     }
     
-    &.parameters, &.array {
+    &.syntax--parameters, &.syntax--array {
       color: @syntax-text-color;
     }
     
-    &.heading, &.identity {
+    &.syntax--heading, &.syntax--identity {
       color: @blue;
     }
     
-    &.bold {
+    &.syntax--bold {
       color: @light-orange;
       font-style: bold;
     }
     
-    &.italic {
+    &.syntax--italic {
       color: @purple;
       font-style: italic;
     }
   }
   
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: white;
   }
   
-  &.key-value {
+  &.syntax--key-value {
     color: @blue;
   }
   
-  &.separator {
-    &.other {
+  &.syntax--separator {
+    &.syntax--other {
       color: @blue;
     }
     
-    &.variable {
+    &.syntax--variable {
       color: white;
     }
   }
 }
 
-.support {
-  &.class {
+.syntax--support {
+  &.syntax--class {
     color: @cream;
   }
   
-  &.function  {
+  &.syntax--function  {
     color: @cyan;
     
-    &.any-method {
+    &.syntax--any-method {
       color: @blue;
     }
   }
 }
 
-.entity {
-  &.name.function {
+.syntax--entity {
+  &.syntax--name.syntax--function {
     color: @light-orange;
   }
   
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @purple;
   }
   
-  &.name.section {
+  &.syntax--name.syntax--section {
     color: @blue;
   }
   
-  &.name.tag {
+  &.syntax--name.syntax--tag {
     color: @red;
     text-decoration: underline;
   }
   
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @purple;
     
-    &.id {
+    &.syntax--id {
       color: @blue;
     }
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
     color: @light-orange;
   }
   
-  &.link {
+  &.syntax--link {
     color: @orange;
   }
   
-  &.require {
+  &.syntax--require {
     color: white;
   }
   
-  &.selector {
+  &.syntax--selector {
     color: @purple;
   }
   
-  &.separator {
+  &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
   }
   
-  &.rspec.behaviour, &.rspec.rspec-example {
+  &.syntax--rspec.syntax--behaviour, &.syntax--rspec.syntax--rspec-example {
     color: @cream;
     
-    .entity.name {
+    .syntax--entity.syntax--name {
       color: @dark-green;
     }
   }
 }
 
-.none {
+.syntax--none {
   color: @syntax-text-color;
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @orange;
     font-style: bold;
   }
   
-  &.changed {
+  &.syntax--changed {
     color: @purple;
   }
   
-  &.deleted {
+  &.syntax--deleted {
     color: @red;
   }
   
-  &.italic {
+  &.syntax--italic {
     color: @purple;
     font-style: italic;
   }
   
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @blue;
   }
   
-  &.inserted {
+  &.syntax--inserted {
     color: @green;
   }
   
-  &.list {
+  &.syntax--list {
     color: @red;
   }
   
-  &.quote {
+  &.syntax--quote {
     color: @orange;
   }
   
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @green;
   }
 }
 
 atom-text-editor[mini] .scroll-view,
-atom-text-editor::shadow[mini] .scroll-view {
+atom-text-editor.editor[mini] .scroll-view {
   padding-left: 1px;
 }
 
 /******* Diff *******/
-.source.diff {
+.syntax--source.syntax--diff {
   float: left;
   width: 100%;
   
-  .markup {
+  .syntax--markup {
     display: block;
     
-    &.deleted {
+    &.syntax--deleted {
       color: white;
       background-color: fade(@diff-red, 50%);
     }
     
-    &.inserted {
+    &.syntax--inserted {
       color: white;
       background-color: fade(@dark-green, 50%);
     }
   }
   
-  .header {
+  .syntax--header {
     display: block;
     background-color: fade(@diff-blue, 50%);
     
-    &.from-file .punctuation {
+    &.syntax--from-file .syntax--punctuation {
       color: darken(@red, 20%);
     }
     
-    &.to-file .punctuation {
+    &.syntax--to-file .syntax--punctuation {
       color: @dark-green;
     }
   }
   
-  .index {
+  .syntax--index {
     display: block;
     background-color: fade(@diff-header, 50%);
   }
   
-  .range.unified {
+  .syntax--range.syntax--unified {
     background-color: fade(@diff-header, 50%);
     
-    .punctuation {
+    .syntax--punctuation {
       font-weight: bold;
       color: silver;
     }
@@ -424,29 +424,30 @@ atom-text-editor::shadow[mini] .scroll-view {
 /******* Diff *******/
 
 /******* Git commit *******/
-atom-text-editor .lines .git-commit, atom-text-editor::shadow .lines .git-commit {
-  .markup {
-    &.changed {
+atom-text-editor .lines .syntax--git-commit,
+atom-text-editor.editor .lines .syntax--git-commit {
+  .syntax--markup {
+    &.syntax--changed {
       color: @orange;
     }
     
-    &.inserted {
+    &.syntax--inserted {
       color: @dark-green;
     }
     
-    &.deleted {
+    &.syntax--deleted {
       color: @dark-red;
     }
   }
   
-  &.embedded .markup {
+  &.syntax--embedded .syntax--markup {
     color: white;
   }
 }
 /******* Git commit *******/
 
 /******* HTML-ish *******/
-atom-text-editor, atom-text-editor::shadow {
+atom-text-editor, atom-text-editor.editor {
   &[data-grammar="text html basic"],
   &[data-grammar="text html erb"],
   &[data-grammar="text haml"],
@@ -455,56 +456,56 @@ atom-text-editor, atom-text-editor::shadow {
   }
 }
 
-atom-text-editor .lines, atom-text-editor::shadow .lines {
-  .text.html, .text.haml, .text.xml {
+atom-text-editor .lines, atom-text-editor.editor .lines {
+  .syntax--text.syntax--html, .syntax--text.syntax--haml, .syntax--text.syntax--xml {
     color: @blue;
     
-    .tag, .embedded {
-      .definition.tag {
+    .syntax--tag, .syntax--embedded {
+      .syntax--definition.syntax--tag {
         color: @blue;
       }
     }
     
-    .embedded {
+    .syntax--embedded {
       color: white;
     }
     
-    .entity.name.tag, .entity.attribute-name {
+    .syntax--entity.syntax--name.syntax--tag, .syntax--entity.syntax--attribute-name {
       color: @pink;
       text-decoration: none;
     }
   }
   
-  .text.html.erb {
-    .embedded.line.erb {
-      & > .source.ruby {
+  .syntax--text.syntax--html.syntax--erb {
+    .syntax--embedded.line.syntax--erb {
+      & > .syntax--source.syntax--ruby {
         background-color: fade(lighten(@background, 10%), 50%);
       }
       
-      .punctuation.erb {
+      .syntax--punctuation.syntax--erb {
         color: @blue;
       }
     }
   }
   
-  .text.haml {
-    .source.embedded {
+  .syntax--text.syntax--haml {
+    .syntax--source.syntax--embedded {
       color: @blue;
       
-      .entity.name.tag {
+      .syntax--entity.syntax--name.syntax--tag {
         color: @dark-orange;
       }
     }
     
-    .line.ruby {
-      .source.ruby {
+    .line.syntax--ruby {
+      .syntax--source.syntax--ruby {
         color: white;
         
-        &.embedded {
+        &.syntax--embedded {
           background-color: fade(lighten(@background, 10%), 50%);
         }
         
-        .viewhelpers.rails, .actionpack.rails {
+        .syntax--viewhelpers.syntax--rails, .syntax--actionpack.syntax--rails {
           color: @red;
         }
       }
@@ -514,12 +515,13 @@ atom-text-editor .lines, atom-text-editor::shadow .lines {
 /******* HTML-ish *******/
 
 /******* YAML *******/
-atom-text-editor .lines .source.yaml, atom-text-editor::shadow .lines .source.yaml {
-  .tag.name.yaml {
+atom-text-editor .lines .syntax--source.syntax--yaml,
+atom-text-editor.editor .lines .syntax--source.syntax--yaml {
+  .syntax--tag.syntax--name.syntax--yaml {
     color: @pink;
     text-decoration: none;
     
-    .punctuation.key-value {
+    .syntax--punctuation.syntax--key-value {
       color: @blue;
     }
   }
@@ -527,45 +529,46 @@ atom-text-editor .lines .source.yaml, atom-text-editor::shadow .lines .source.ya
 /******* YAML *******/
 
 /******* Coffeescript & JS *******/
-.source.coffee, .source.js {
-  .meta {
-    .storage.type.class {
+.syntax--source.syntax--coffee,
+.syntax--source.syntax--js {
+  .syntax--meta {
+    .syntax--storage.syntax--type.syntax--class {
       color: @dark-orange;
     }
     
-    .name.class {
+    .syntax--name.syntax--class {
       color: @purple;
     }
     
-    &.function {
-      .storage.type.function {
+    &.syntax--function {
+      .syntax--storage.syntax--type.syntax--function {
         color: @bright-cyan;
       }
     }
   }
   
-  .support.function {
+  .syntax--support.syntax--function {
     color: @bright-cyan;
   }
   
-  .entity.name.instance.type {
+  .syntax--entity.syntax--name.syntax--instance.syntax--type {
     color: @purple;
   }
   
-  .storage.type.function {
+  .syntax--storage.syntax--type.syntax--function {
     color: @blue;
   }
   
-  .instance.constructor .keyword.new {
+  .syntax--instance.syntax--constructor .syntax--keyword.syntax--new {
     color: @dark-orange;
   }
   
-  .keyword.operator {
+  .syntax--keyword.syntax--operator {
     color: @blue;
   }
   
-  .string.double.quoted {
-    .source.coffee.embedded {
+  .syntax--string.syntax--double.syntax--quoted {
+    .syntax--source.syntax--coffee.syntax--embedded {
       color: white;
     }
   }
@@ -574,41 +577,41 @@ atom-text-editor .lines .source.yaml, atom-text-editor::shadow .lines .source.ya
 
 /******* Markdown *******/
 atom-text-editor[data-grammar="source gfm"],
-atom-text-editor::shadow[data-grammar="source gfm"] {
+atom-text-editor.editor[data-grammar="source gfm"] {
   background-color: @dark-background;
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
   
-  &.heading {
+  &.syntax--heading {
     color: @dark-orange;
     
-    &.heading-1, &.heading-2 {
+    &.syntax--heading-1, &.syntax--heading-2 {
       text-decoration: underline;
       text-decoration: blink;
     }
   }
   
-  &.raw {
+  &.syntax--raw {
     font-family: monospace;
     background: fade(white, 40%);
     border: solid 1px transparent;
     color: white;
     
-    .support {
+    .syntax--support {
       -webkit-text-stroke: 2px white;
     }
   }
   
-  &.bold {
+  &.syntax--bold {
     color: @orange;
     -webkit-text-stroke: 1px @orange;
   }
 }
 
-.source.gfm {
-  .comment.hr {
+.syntax--source.syntax--gfm {
+  .syntax--comment.syntax--hr {
     &:after {
       content: '                                                                             ';
     }
@@ -618,23 +621,23 @@ atom-text-editor::shadow[data-grammar="source gfm"] {
     }
   }
   
-  .quote {
-    &.comment {
+  .syntax--quote {
+    &.syntax--comment {
       color: @cyan;
     }
-    &.support {
+    &.syntax--support {
       color: @green;
     }
   }
   
-  .link {
+  .syntax--link {
     color: @cream;
     
-    .entity {
+    .syntax--entity {
       color: darken(saturate(@blue, 40%), 10%);
     }
     
-    .underline {
+    .syntax--underline {
       text-decoration: underline;
       color: @blue;
     }
@@ -644,18 +647,18 @@ atom-text-editor::shadow[data-grammar="source gfm"] {
 
 /******* Cucumber *******/
 atom-text-editor[data-grammar="text gherkin feature"],
-atom-text-editor::shadow[data-grammar="text gherkin feature"] {
+atom-text-editor.editor[data-grammar="text gherkin feature"] {
   background-color: @dark-background;
 }
 
-.text.gherkin {
+.syntax--text.syntax--gherkin {
   color: white;
   
-  .cucumber {
+  .syntax--cucumber {
     background-color: transparent;
   }
   
-  .cucumber.table {
+  .syntax--cucumber.syntax--table {
     color: @blue;
   }
 }
