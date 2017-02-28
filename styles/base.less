@@ -456,8 +456,11 @@ atom-text-editor, atom-text-editor.editor {
   }
 }
 
-atom-text-editor .lines, atom-text-editor.editor .lines {
-  .syntax--text.syntax--html, .syntax--text.syntax--haml, .syntax--text.syntax--xml {
+atom-text-editor .lines,
+atom-text-editor.editor .lines {
+  .syntax--text.syntax--html,
+  .syntax--text.syntax--haml,
+  .syntax--text.syntax--xml {
     color: @blue;
     
     .syntax--tag, .syntax--embedded {
@@ -470,14 +473,15 @@ atom-text-editor .lines, atom-text-editor.editor .lines {
       color: white;
     }
     
-    .syntax--entity.syntax--name.syntax--tag, .syntax--entity.syntax--attribute-name {
+    .syntax--entity.syntax--name.syntax--tag,
+    .syntax--entity.syntax--attribute-name {
       color: @pink;
       text-decoration: none;
     }
   }
   
   .syntax--text.syntax--html.syntax--erb {
-    .syntax--embedded.line.syntax--erb {
+    .syntax--embedded.syntax--line.syntax--erb {
       & > .syntax--source.syntax--ruby {
         background-color: fade(lighten(@background, 10%), 50%);
       }
@@ -488,7 +492,7 @@ atom-text-editor .lines, atom-text-editor.editor .lines {
     }
   }
   
-  .syntax--text.syntax--haml {
+  .syntax--haml {
     .syntax--source.syntax--embedded {
       color: @blue;
       
@@ -497,7 +501,7 @@ atom-text-editor .lines, atom-text-editor.editor .lines {
       }
     }
     
-    .line.syntax--ruby {
+    .syntax--line.syntax--ruby {
       .syntax--source.syntax--ruby {
         color: white;
         
